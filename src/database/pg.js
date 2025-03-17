@@ -27,3 +27,12 @@ async function query(queryStr, params = []) {
 }
 
 module.exports = query;
+
+
+const categoryModel = require("../model/category.model");
+const productModel = require("../model/product.model");
+
+(async () => {
+  await query(categoryModel);
+  await query(productModel);
+})();
